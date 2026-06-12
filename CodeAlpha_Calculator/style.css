@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #0a0a0a, #3a4452);
+}
+.calculator {
+    width: 360px;
+    border: 1px solid rgba(113,117,119,0.45);
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.55);
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    display: grid;
+    gap: 12px;
+    backdrop-filter: blur(6px);
+}
+
+/* Input */
+.calculator > #inputBox {
+    width: 100%;
+    border: none;
+    padding: 20px 18px;
+    margin: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0.28), rgba(0,0,0,0.20));
+    box-shadow: inset 0 -6px 12px rgba(0,0,0,0.25);
+    font-size: 36px;
+    text-align: right;
+    color: #ffffff;
+    border-radius: 10px;
+}
+
+.calculator > #inputBox::placeholder {
+    color: rgba(255,255,255,0.55);
+}
+
+.calculator > div {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+button {
+    border: none;
+    height: 64px;
+    border-radius: 12px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.15));
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.02);
+    cursor: pointer;
+    transition: transform 0.06s ease, box-shadow 0.06s ease, background-color 0.12s ease;
+}
+
+button:hover { transform: translateY(-3px); }
+button:active { transform: translateY(0); }
+
+button:focus-visible {
+    outline: 3px solid rgba(255,122,45,0.18);
+    outline-offset: 4px;
+}
+
+.equal-btn {
+    background: linear-gradient(180deg,#ff8a3a,#d04900);
+    box-shadow: 0 12px 30px rgba(208,73,0,0.28);
+    font-weight: 700;
+}
+
+.operator {
+    color: #9ff0ef;
+    background: linear-gradient(180deg, rgba(10,10,10,0.45), rgba(10,10,10,0.30));
+}
+
+.pressed {
+    transform: translateY(1px) scale(0.99) !important;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.6) !important;
+    opacity: 0.95;
+}
+
+.sr-only { position: absolute; left: -9999px; }
+
+@media (max-width: 420px) {
+    .calculator { width: 92vw; }
+    .calculator > #inputBox { font-size: 28px; padding: 14px; }
+    button { height: 56px; font-size: 16px; }
+}
