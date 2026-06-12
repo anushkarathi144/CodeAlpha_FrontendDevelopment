@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="lightbox" aria-hidden="true">
+        <button class="lightbox-close" aria-label="Close lightbox">×</button>
+        <button class="lightbox-nav prev" aria-label="Previous image">‹</button>
+        <button class="lightbox-nav next" aria-label="Next image">›</button>
+        <figure class="lightbox-content">
+            <img src="" alt="">
+            <figcaption class="lightbox-caption"></figcaption>
+        </figure>
+    </div>
+
+    <section class="search">
+        <img src="Images/background.avif " alt="gallery background">
+        <div class="content">
+            <h1>Image Gallery</h1>
+            <p>Welcome to the Image Gallery! Explore beautiful photos with fast navigation, filters, and a smooth lightbox experience.</p>
+            <div class="search-box">
+                <i class="uil uil-search"></i>
+                <input type="text" placeholder="Search images">
+            </div>
+        </div>
+    </section>
+
+    <section class="filters">
+        <button class="filter-btn active" data-category="all">All</button>
+        <button class="filter-btn" data-category="nature">Nature</button>
+        <button class="filter-btn" data-category="people">People</button>
+        <button class="filter-btn" data-category="cities">Cities</button>
+        <button class="filter-btn" data-category="food">Food</button>
+        <button class="filter-btn" data-category="animals">Animals</button>
+    </section>
+
+    <section class="gallery">
+        <ul class="images">
+            <li class="card" data-category="people" data-title="Cute baby" data-author="John Doe">
+                <img src="Images/img1.jpeg" alt="Cute baby">
+                <div class="details">
+                    <div class="author">
+                        <i class="uil uil-camera"></i>
+                        <span>Cute Baby</span>
+                    </div>
+                    <button class="download-btn" aria-label="Download Cute baby"><i class="uil uil-import"></i></button>
+                </div>
+            </li>
+            <li class="card" data-category="animals" data-title="Kitty" data-author="Mia Lee">
+                <img src="Images/img2.jpeg" alt="Green forest">
+                <div class="details">
+                    <div class="author">
+                        <i class="uil uil-camera"></i>
+                        <span>Kitty</span>
+                    </div>
+                    <button class="download-btn" aria-label="Download Kitty"><i class="uil uil-import"></i></button>
+                </div>
+            </li>
+            <li class="card" data-category="people" data-title="Girl portrait" data-author="Ethan Clark">
+                <img src="Images/img3.jpeg" alt="Happy portrait">
+                <div class="details">
+                    <div class="author">
+                        <i class="uil uil-camera"></i>
+                        <span>Girl portrait</span>
+                    </div>
+                    <button class="download-btn" aria-label="Download Girl portrait"><i class="uil uil-import"></i></button>
+                </div>
+            </li>
+            <li class="card" data-category="food" data-title="Delicious Food" data-author="Ava Smith">
+                <img src="Images/img4.jpeg" alt="City skyline">
+                <div class="details">
+                    <div class="author">
+                        <i class="uil uil-camera"></i>
+                        <span>Delicious Food</span>
+                    </div>
+                    <button class="download-btn" aria-label="Download Delicious Food"><i class="uil uil-import"></i></button>
+                </div>
+            </li>
+            <li class="card" data-category="nature" data-title="Sunset Desert" data-author="Noah Patel">
+                <img src="Images/img5.jpeg" alt="Sunset beach">
+                <div class="details">
+                    <div class="author">
+                        <i class="uil uil-camera"></i>
+                        <span>Sunset Desert</span>
+                    </div>
+                    <button class="download-btn" aria-label="Download Sunset Desert"><i class="uil uil-import"></i></button>
+                </div>
+            </li>
+            <li class="card" data-category="cities" data-title="Street architecture" data-author="Lily Chen">
+                <img src="Images/img6.jpeg" alt="Travel portrait">
+                <div class="details">
+                    <div class="author">
+                        <i class="uil uil-camera"></i>
+                        <span>Street Architecture</span>
+                    </div>
+                    <button class="download-btn" aria-label="Download Street architecture"><i class="uil uil-import"></i></button>
+                </div>
+            </li>
+            <li class="card" data-category="cities" data-title="City Skyline" data-author="Sophia Kim">
+                <img src="Images/img7.jpeg" alt="Night lights">
+                <div class="details">
+                    <div class="author">
+                        <i class="uil uil-camera"></i>
+                        <span>City Skyline</span>
+                    </div>
+                    <button class="download-btn" aria-label="City Skyline"><i class="uil uil-import"></i></button>
+                </div>
+            </li>
+            <li class="card" data-category="food" data-title="Ice Cream" data-author="Lucas Green">
+                <img src="Images/img8.jpeg" alt="Mountain river">
+                <div class="details">
+                    <div class="author">
+                        <i class="uil uil-camera"></i>
+                        <span>Ice Cream</span>
+                    </div>
+                    <button class="download-btn" aria-label="Download Ice Cream"><i class="uil uil-import"></i></button>
+                </div>
+            </li>
+            <li class="card" data-category="nature" data-title="Mountains" data-author="Emma Stone">
+                <img src="Images/img9.jpeg" alt="Street architecture">
+                <div class="details">
+                    <div class="author">
+                        <i class="uil uil-camera"></i>
+                        <span>Mountains</span>
+                    </div>
+                    <button class="download-btn" aria-label="Download Mountains"><i class="uil uil-import"></i></button>
+                </div>
+            </li>
+            <li class="card" data-category="nature" data-title="Sunrise Beach" data-author="Mason Liu">
+                <img src="Images/img10.jpeg" alt="Flower close-up">
+                <div class="details">
+                    <div class="author">
+                        <i class="uil uil-camera"></i>
+                        <span>Sunrise Beach</span>
+                    </div>
+                    <button class="download-btn" aria-label="Download Sunrise Beach"><i class="uil uil-import"></i></button>
+                </div>
+            </li>
+            <li class="card" data-category="nature" data-title="Grassland" data-author="Leo Tang">
+                <img src="Images/img11.jpeg" alt="Grassland">
+                <div class="details">
+                    <div class="author">
+                        <i span="uil uil-camera"></i>
+                        <span>GrassLand</span>
+                    </div>
+                    <button class="download-btn" aria-label="Download Grassland"><i class="uil uil-import"></i></button>
+                </div>
+            </li>
+             <li class="card" data-category="nature" data-title="forest" data-author="Marque">
+                <img src="Images/img12.jpeg" alt="Forest">
+                <div class="details">
+                    <div class="author">
+                        <i span="uil uil-camera"></i>
+                        <span>Forest</span>
+                    </div>
+                    <button class="download-btn" aria-label="Download Forest"><i class="uil uil-import"></i></button>
+                </div>
+                </li>
+                 <li class="card" data-category="food" data-title="Western Cuisine" data-author="Tarla Dalal">
+                <img src="Images/img13.jpeg" alt="Western Cuisine">
+                <div class="details">
+                    <div class="author">
+                        <i span="uil uil-camera"></i>
+                        <span>Western Cuisine</span>
+                    </div>
+                    <button class="download-btn" aria-label="Download Western Cuisine"><i class="uil uil-import"></i></button>
+                </div>
+                </li>
+                 <li class="card" data-category="food" data-title="North-Indian Cuisine" data-author="Sanjeev Kapoor">
+                <img src="Images/img14.jpeg" alt="Forest">
+                <div class="details">
+                    <div class="author">
+                        <i span="uil uil-camera"></i>
+                        <span>North-Indian Cuisine</span>
+                    </div>
+                    <button class="download-btn" aria-label="Download North-Indian Cuisine"><i class="uil uil-import"></i></button>
+                </div>
+                </li>
+                 <li class="card" data-category="food" data-title="South-Indian Cuisine" data-author="Vikas Khanna">
+                <img src="Images/img15.jpeg" alt="South-Indian Cuisine">
+                <div class="details">
+                    <div class="author">
+                        <i span="uil uil-camera"></i>
+                        <span>South-Indian Cuisine</span>
+                    </div>
+                    <button class="download-btn" aria-label="Download South-Indian Cuisine"><i class="uil uil-import"></i></button>
+                </div>
+                </li>
+                <li class="card" data-category="cities" data-title="Street-Side" data-author="Lana Carroll">
+                <img src="Images/img16.jpeg" alt="Street-Side">
+                <div class="details">
+                    <div class="author">
+                        <i span="uil uil-camera"></i>
+                        <span>Street-Side</span>
+                    </div>
+                    <button class="download-btn" aria-label="Download Street-Side"><i class="uil uil-import"></i></button>
+                </div>
+                </li>
+                <li class="card" data-category="cities" data-title="SkyScrapper" data-author="Lewis Doyal">
+                <img src="Images/img17.jpeg" alt="SkyScrapper">
+                <div class="details">
+                    <div class="author">
+                        <i span="uil uil-camera"></i>
+                        <span>SkyScrapper</span>
+                    </div>
+                    <button class="download-btn" aria-label="Download SkyScrapper"><i class="uil uil-import"></i></button>
+                </div>
+                </li>
+                <li class="card" data-category="animals" data-title="Birds" data-author="Anna Welty">
+                <img src="Images/img18.jpeg" alt="Birds">
+                <div class="details">
+                    <div class="author">
+                        <i span="uil uil-camera"></i>
+                        <span> Adorable Birds</span>
+                    </div>
+                    <button class="download-btn" aria-label="Download Birds"><i class="uil uil-import"></i></button>
+                </div>
+                </li>
+            <li class="card" data-category="animals" data-title="Tiger" data-author="Ralph Ellison">
+                <img src="Images/img19.jpeg" alt="Tiger">
+                <div class="details">
+                    <div class="author">
+                        <i span="uil uil-camera"></i>
+                        <span>Tiger</span>
+                    </div>
+                    <button class="download-btn" aria-label="Download Tiger"><i class="uil uil-import"></i></button>
+                </div>
+                </li>
+            <li class="card" data-category="animals" data-title="Panda" data-author="Noah Twis">
+                <img src="Images/img20.jpeg" alt="Panda">
+                <div class="details">
+                    <div class="author">
+                        <i span="uil uil-camera"></i>
+                        <span>Panda</span>
+                    </div>
+                    <button class="download-btn" aria-label="Download Panda"><i class="uil uil-import"></i></button>
+                </div>
+                </li>
+            <li class="card" data-category="people" data-title="Men" data-author="Jack Gill">
+                <img src="Images/img21.jpeg" alt="Men">
+                <div class="details">
+                    <div class="author">
+                        <i span="uil uil-camera"></i>
+                        <span>Men in Dreams</span>
+                    </div>
+                    <button class="download-btn" aria-label="Download Men"><i class="uil uil-import"></i></button>
+                </div>
+                </li>
+                <li class="card" data-category="people" data-title="Lady" data-author="Eudora Boyd">
+                <img src="Images/img22.jpeg" alt="Lady">
+                <div class="details">
+                    <div class="author">
+                        <i span="uil uil-camera"></i>
+                        <span>Beautiful Lady</span>
+                    </div>
+                    <button class="download-btn" aria-label="Download Lady"><i class="uil uil-import"></i></button>
+                </div>
+                </li>
+        </ul>
+        <div class="no-results hidden">No images match your search or filter.</div>
+    </section>
+</body>
+</html>
